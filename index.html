@@ -34,7 +34,6 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
             <a href="index.html">
                 <img src="assets/img/images/logo-16fc21eba7.png">
             </a>
-
         </div>
 
         <div class="head-right">
@@ -106,7 +105,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
     <div class="s-product-wrap">
         <div class="s-product-wrap-inner">
             <div class="s-product-block foo">
-                <a href="javascript:;" data-img="product-250" class="s-product-item"
+                <a href="javascript:;" data-img="product-250" data-modal="s-product-item-250" class="s-product-item"
                    style="background-image: url('assets/img/product-250.jpg')">
                     <div class="s-product-detail">
                         <div class="s-product-title">本知味堂三七 - 体验版<br>
@@ -118,7 +117,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
                         <div class="s-product-weight">净含量 : 250g</div>
                     </div>
                 </a>
-                <a href="javascript:;" data-img="product-500" class="s-product-item"
+                <a href="javascript:;" data-img="product-500" data-modal="s-product-item-500" class="s-product-item"
                    style="background-image: url('assets/img/product-500.jpg')">
                     <div class="s-product-detail">
                         <div class="s-product-title">本知味堂三七 - 经典版<br>
@@ -129,7 +128,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
                         <div class="s-product-weight">净含量 : 500g</div>
                     </div>
                 </a>
-                <a href="javascript:;" data-img="product-1000" class="s-product-item"
+                <a href="javascript:;" data-img="product-1000" data-modal="s-product-item-1000" class="s-product-item"
                    style="background-image: url('assets/img/product-1000.jpg')">
                     <div class="s-product-detail">
                         <div class="s-product-title">本知味堂三七 - 分享版<br>
@@ -369,7 +368,81 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
 
     <div class="bzwt-modal-wrapper">
         <div class="bzwt-modal-inner">
+            <div class="modal-s-product-item-250">
+                <div style="font-size: 50px">经典款</div>
+                <small style="opacity: .5">CLASSIC</small>
+                <hr>
+                <ul style="padding: 0;">
+                    <li>产品
+                        <small>(Production)</small>
+                        : 30头三七
+                    </li>
+                    <li>净含量
+                        <small>(Net)</small>
+                        : 500g(120-130g * 4)
+                    </li>
+                    <li>保质期
+                        <small>(Shelf Life)</small>
+                        : 36个月
+                    </li>
+                    <li>食用周期
+                        <small>(Lifetime)</small>
+                        : 4-6个月(一人)
+                    </li>
+                    <li>价格
+                        <small>(Price)</small>
+                        : ¥ 698
+                    </li>
+                    <li>&nbsp;</li>
+                    <li>最大直径
+                        <small>(Max Diameter)</small>
+                        : 2.5-3.0cm
+                    </li>
+                    <li>最小直径
+                        <small>(Min Diameter)</small>
+                        : 0.8cm以上
+                    </li>
+                    <li>单头重量
+                        <small>(Weight Per)</small>
+                        : 16-19g
+                    </li>
+                    <li>&nbsp;</li>
+                    <li>产地
+                        <small>(Origin)</small>
+                        : 云南文山
+                    </li>
+                    <li>生长环境
+                        <small>(Growing Environment)</small>
+                        : 红土土质
+                    </li>
+                    <li>产品形状
+                        <small>(Shape)</small>
+                        : 长形
+                    </li>
+                    <li>产品类型/特性
+                        <small>(Subject)</small>
+                        : 滑头
+                    </li>
+                    <li>卡路里
+                        <small>(Cal.)</small>
+                        : 6千焦/3g
+                    </li>
 
+
+                    <!--<li>Max Diameter <small>(最大直径)</small> : 2.5-3.0cm(这条为什么越小越好)</li>-->
+                    <!--<li>Min Diameter <small>(最小直径)</small> : 0.8cm以上(这条为什么越小越好)</li>-->
+                    <!--<li>Weight Per <small>(单头重量)</small> : 16-19g(这条为什么越重越好)</li>-->
+                    <!--<li>Net <small>(净含量)</small> : 500g(120-130g * 4)(为什么要分成4组分别封装)</li>-->
+
+                </ul>
+                <img src="assets/img/test.jpg" style="width: 10%;">
+                <hr>
+                清洁度 无残留沙土<br>
+                横断面颜色 墨绿或黄绿色<br>
+                形态 无孔洞、伤痕、深沟壑、皮筋勒痕等<br>
+                完整性 无剪口留胶<br>
+                美观度 无过多根叉留头<br>
+            </div>
         </div>
     </div>
 </div>
@@ -382,15 +455,20 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
 <script src="assets/js/scrollreveal.min.js"></script>
 
 <script>
-    var showBzwtModal = function () {
+    var showBzwtModal = function (modal_id) {
+        $(".bzwt-modal-inner > div").css('display', 'none');
+        $(".bzwt-modal-inner div.modal-" + modal_id).css('display', 'block');
+//        $(".bzwt-modal-inner > div.modal-" + modal_id).css('display', 'block');
+        $(".bzwt-modal-wrapper").scrollTop(0);
+        $(".bzwt-modal-inner").fadeOut().delay(500).fadeIn("slow");
         $("body").css('overflow', 'hidden');
         $(".bzwt-modal").addClass("bzwt-modal-show");
     };
 
     //modal
     $(function () {
-        $(".s-product-item").click(function () {
-            showBzwtModal();
+        $("body [data-modal]").click(function () {
+            showBzwtModal($(this).data("modal"));
         });
         $(".bzwt-modal-close").click(function () {
             $(".bzwt-modal").removeClass("bzwt-modal-show");
