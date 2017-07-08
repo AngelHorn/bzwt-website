@@ -7,6 +7,7 @@ body {
 }
 
 body {
+    font-weight: 300;
     background: #FFF;
     font-family: Helvetica neue,
     Helvetica,
@@ -30,6 +31,36 @@ body {
 .paragraph-hr {
     height: 67px;
     background-color: #FFF;
+}
+
+.paragraph-background {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.paragraph-background p {
+    margin: 0;
+    text-align: right;
+    /* margin-left: -24px; */
+    color: #F2F2F2;
+    font-size: 200px;
+    font-weight: 800;
+    line-height: 200px;
+}
+
+.paragraph-background span {
+    border-bottom: 1px solid #000;
+    font-size: 50px;
+    font-weight: 700;
+    /* margin-right: 72px; */
+    float: right;
+    position: relative;
+    top: -80px;
+    letter-spacing: 30px;
+    /* left: -60px; */
+
 }
 
 #video-bg {
@@ -120,6 +151,12 @@ body {
     /*border-radius: 5px;*/
 }
 
+.nav-pc > li:hover {
+    border-bottom: 2px solid #FFF;
+    /*transform:  scaleX(1.5) border-bottom;*/
+    transition: border-bottom 500ms ease-in-out;
+}
+
 .nav-pc > li > a {
     color: #fff;
     font-size: 14px;
@@ -165,8 +202,29 @@ body {
 }
 
 .s-product-wrap .s-product-block .s-product-item .s-product-detail .s-product-weight {
-    background-color: #99CC66;
+    /*background-color: #99CC66;*/
+    background-color: #000;
     padding: 5px 15px;
+}
+
+.s-product-wrap .s-product-block .s-product-item .s-product-detail .s-product-detail-button {
+    left: inherit;
+    bottom: 18px;
+    right: 18px;
+    position: absolute;
+    /*background-color: #FFF;*/
+    font-size: 16px;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.s-product-wrap .s-product-block .s-product-item:hover .s-product-detail .s-product-detail-button {
+    background-color: #000;
+    color: #FFF;
+    transition: all 200ms ease-in-out;
 }
 
 .s-product-wrap .s-product-block .s-product-item .s-product-detail .s-product-title {
@@ -550,7 +608,7 @@ body {
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
 
     .s-product-wrap .s-product-pic-wrap {
-        top: 70px;
+        top: 170px;
         left: 485px;
         right: 100px;
         bottom: 40px;
