@@ -308,33 +308,126 @@ body {
     /*background-image: url("../img/IMG_2247_blur.jpg");*/
 }
 
+.s-instruction-wrap .s-instruction-config-wrap {
+    width: 100%;
+    text-align: center;
+    margin-top: 240px;
+    top: inherit;
+    right: inherit;
+}
+
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace {
-    padding: 5px;
+    padding: 0;
     border: none;
     border-radius: 0;
     background-color: #FFF;
     text-align: left;
-    box-shadow: 0 8px 24px 0 rgba(70, 61, 77, 0.6);
+    box-shadow: none;
     box-sizing: border-box;
-}
-
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:nth-child(2) {
-    margin-top: 10px;
+    display: inline-block;
+    width: 340px;
+    overflow: hidden;
 }
 
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div {
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    /*padding-top: 258px;*/
+    width: 340px;
+    height: 340px;
+    font-size: 30px;
+    overflow: hidden;
+    background-position: center;
+    background-size: 100%;
+    transition: background-size 100ms cubic-bezier(.55,.085,.68,.53);
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:nth-child(1) > div {
-    background-image: url(../img/IMG_0538.jpg);
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > div {
+    background-size: 120%;
+    transition: background-size 100ms cubic-bezier(.55,.085,.68,.53);
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:nth-child(2) > div {
-    background-image: url(../img/IMG_9799.jpg);
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > p {
+    /*padding-left: 20px;*/
+    margin: 0;
+    font-size: 14px;
+    position: absolute;
+    bottom: 53px;
+    left: 20px;
 }
+
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > span:nth-child(2) {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    /*padding-left: 20px;*/
+}
+
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > .s-instruction-detail-button {
+    left: inherit;
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    /*background-color: #FFF;*/
+    font-size: 16px;
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: 5px 15px;
+    font-weight: 400;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+}
+
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > div > .s-instruction-detail-button {
+    background-color: #FFF;
+    color: #000;
+    transition: all 200ms ease-in-out;
+}
+
+/*.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace {*/
+/*padding: 5px;*/
+/*border: none;*/
+/*border-radius: 0;*/
+/*background-color: #FFF;*/
+/*text-align: left;*/
+/*box-shadow: 0 8px 24px 0 rgba(70, 61, 77, 0.6);*/
+/*box-sizing: border-box;*/
+/*}*/
+
+/*.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:nth-child(2) {*/
+/*margin-top: 10px;*/
+/*}*/
+
+/*.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div {*/
+/*background-size: cover;*/
+/*height: 100%;*/
+/*width: 100%;*/
+/*}*/
+
+.s-instruction-wrap .s-instruction-config-wrap a:nth-child(1) .s-instruction-config-pace > div {
+    background-image: url(../img/intro-sanchi.jpg);
+}
+
+.s-instruction-wrap .s-instruction-config-wrap a:nth-child(2) .s-instruction-config-pace > div {
+    background-image: url(../img/intro-wenshan.jpg);
+}
+
+.s-instruction-wrap .s-instruction-config-wrap a:nth-child(3) .s-instruction-config-pace > div {
+    background-image: url(../img/intro-function.jpg);
+}
+
+/*.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:nth-child(1) > div {*/
+/*background-image: url(../img/IMG_0538.jpg);*/
+/*}*/
+
+/*.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:nth-child(2) > div {*/
+/*background-image: url(../img/IMG_9799.jpg);*/
+/*}*/
+
+/*.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:nth-child(3) > div {*/
+/*background-image: url(../img/IMG_9799.jpg);*/
+/*}*/
 
 .s-instruction-wrap .s-instruction-text-wrap {
     text-align: center;
