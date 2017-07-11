@@ -34,6 +34,7 @@ body {
 }
 
 .paragraph-background {
+    top: 40px;
     position: absolute;
     width: 100%;
     overflow: hidden;
@@ -311,7 +312,7 @@ body {
 .s-instruction-wrap .s-instruction-config-wrap {
     width: 100%;
     text-align: center;
-    margin-top: 240px;
+    margin-top: 280px;
     top: inherit;
     right: inherit;
 }
@@ -340,12 +341,12 @@ body {
     overflow: hidden;
     background-position: center;
     background-size: 100%;
-    transition: background-size 100ms cubic-bezier(.55,.085,.68,.53);
+    transition: background-size 100ms cubic-bezier(.55, .085, .68, .53);
 }
 
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > div {
     background-size: 120%;
-    transition: background-size 100ms cubic-bezier(.55,.085,.68,.53);
+    transition: background-size 100ms cubic-bezier(.55, .085, .68, .53);
 }
 
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > p {
