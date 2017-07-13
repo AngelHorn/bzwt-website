@@ -472,7 +472,7 @@ body {
 
 .s-service .s-service-wrap {
     position: relative;
-    background-size: 100%;
+    background-size: auto;
     background-position: center 60px;
     background-repeat: no-repeat;
     /*height: 800px;*/
@@ -481,7 +481,6 @@ body {
 }
 
 .s-service .s-service-wrap > img {
-    width: 100%;
     visibility: hidden;
 }
 
