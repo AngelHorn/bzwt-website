@@ -473,14 +473,14 @@ body {
 .s-service .s-service-wrap {
     position: relative;
     background-size: auto;
-    background-position: center 60px;
+    background-position: center top;
     background-repeat: no-repeat;
     /*height: 800px;*/
     background-attachment: fixed;
-
 }
 
 .s-service .s-service-wrap > img {
+    vertical-align: bottom;
     visibility: hidden;
 }
 
@@ -511,6 +511,10 @@ body {
 
 .s-service .s-service-wrap .s-service-inner .s-service-content p {
     font-size: 3.4rem;
+}
+
+.s-service .s-service-wrap .s-service-inner .s-service-content span {
+    font-size: 1.4rem;
 }
 
 .s-service:nth-child(1) .s-service-wrap {
