@@ -131,14 +131,6 @@ body {
 .paragraph {
 }
 
-#zyp-test {
-    opacity: 0;
-}
-
-#zyp-test.zyp-test-show {
-    transition: all 900ms ease-in-out;
-    opacity: 1;
-}
 
 .nav-pc {
     margin: 0;
@@ -191,9 +183,8 @@ body {
 
 .bzwt-contact a img:hover {
     /*background-color: rgb(135,214,91);*/
-    transition: all 500ms linear;
+    transition: all 300ms ease-in-out;
     transform: scale3d(1.15, 1.16, 1.1);
-    transition-duration: 500ms;
 }
 
 .clearfix {
@@ -220,12 +211,12 @@ body {
     padding: 5px 15px;
     font-weight: 400;
     text-align: center;
+    transition: all 200ms ease-in-out;
 }
 
 .s-product-wrap .s-product-block .s-product-item:hover .s-product-detail .s-product-detail-button {
     background-color: #000;
     color: #FFF;
-    transition: all 200ms ease-in-out;
 }
 
 .s-product-wrap .s-product-block .s-product-item .s-product-detail .s-product-title {
@@ -346,7 +337,6 @@ body {
 
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > div {
     background-size: 120%;
-    transition: background-size 100ms cubic-bezier(.55, .085, .68, .53);
 }
 
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > p {
@@ -492,6 +482,7 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
+    transition: all 200ms ease-in-out;
 }
 
 .s-service .s-service-wrap .s-service-inner .s-service-content {
@@ -519,24 +510,33 @@ body {
 }
 
 .s-service:nth-child(1) .s-service-wrap {
-    background-image: url(//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/ecrin.adaptive.1637.jpg);
+    background-image: url("../../assets/img/services/1.jpg");
+    /*background-image: url(//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/ecrin.adaptive.1637.jpg);*/
 }
 
 .s-service:nth-child(2) .s-service-wrap {
-    background-image: url('//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/echantillons.adaptive.1637.jpg');
+    background-image: url("../../assets/img/services/2.jpg");
+    /*background-image: url('//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/echantillons.adaptive.1637.jpg');*/
 }
 
 .s-service:nth-child(3) .s-service-wrap {
-    background-image: url('//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/equipe-dediee.adaptive.1637.jpg');
+    background-image: url("../../assets/img/services/3.jpg");
+    /*background-image: url('//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/equipe-dediee.adaptive.1637.jpg');*/
 }
 
 .s-service:nth-child(4) .s-service-wrap {
-    background-image: url('https://i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/livraison.adaptive.1637.jpg');
+    background-image: url("../../assets/img/services/4.jpg");
+    /*background-image: url('https://i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/livraison.adaptive.1637.jpg');*/
 }
 
 .s-service:nth-child(even) .s-service-wrap .s-service-inner {
     left: inherit;
     right: 0;
+}
+.s-service .s-service-wrap .s-service-inner:hover{
+    /*transition: all 200ms ease-in-out;*/
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 /*产品特色*/
