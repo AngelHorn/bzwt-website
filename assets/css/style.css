@@ -131,7 +131,6 @@ body {
 .paragraph {
 }
 
-
 .nav-pc {
     margin: 0;
     padding: 0;
@@ -497,9 +496,11 @@ body {
     right: 0;
 }
 
-.s-service .s-service-wrap .s-service-inner .s-service-content img {
-    width: 20%;
+.s-service .s-service-wrap .s-service-inner .s-service-content svg {
+    width: 15%;
+    transition: fill 200ms ease-in-out;
 }
+
 
 .s-service .s-service-wrap .s-service-inner .s-service-content p {
     font-size: 3.4rem;
@@ -533,10 +534,33 @@ body {
     left: inherit;
     right: 0;
 }
-.s-service .s-service-wrap .s-service-inner:hover{
+
+.s-service .s-service-wrap .s-service-inner:hover {
     /*transition: all 200ms ease-in-out;*/
     background-color: #000000;
     color: #FFFFFF;
+}
+
+.s-service .s-service-wrap .s-service-inner .s-service-content .s-service-detail-button {
+    display: table;
+    margin: 10px auto;
+    position: relative;
+    /*background-color: #000;*/
+    font-size: 16px;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    font-weight: 400;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+}
+
+.s-service .s-service-wrap .s-service-inner:hover .s-service-content .s-service-detail-button {
+    background-color: #fff;
+}
+
+.s-service .s-service-wrap .s-service-inner:hover .s-service-content svg {
+    fill: #FFF;
 }
 
 /*产品特色*/
