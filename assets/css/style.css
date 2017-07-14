@@ -7,6 +7,8 @@ body {
 }
 
 body {
+    width: 100%;
+    overflow-x: hidden;
     font-weight: 300;
     background: #FFF;
     font-family: Helvetica neue,
@@ -501,7 +503,6 @@ body {
     transition: fill 400ms ease-in-out;
 }
 
-
 .s-service .s-service-wrap .s-service-inner .s-service-content p {
     font-size: 3.4rem;
 }
@@ -702,6 +703,41 @@ body {
     opacity: 0;
 }
 
+.bzwt-footer .info-block a {
+    color: #FFF;
+}
+
+.bzwt-footer .info-right .info-text {
+    color: #FFF;
+}
+
+.bzwt-footer .info-right .info-social a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 60px;
+    /*background-size: 6rem 6rem;*/
+    background-image: url(../../assets/img/icons/icons-contact.png);
+    background-repeat: no-repeat;
+    background-color: #000000;
+}
+
+.bzwt-footer .info-right .info-social a.wechat-link {
+    background-position: 0 0;
+}
+
+.bzwt-footer .info-right .info-social a.weibo-link {
+    background-position: 0 -256px;
+}
+
+.bzwt-footer .copyright {
+    color: #fff;
+}
+
+.bzwt-footer .copyright a {
+    color: #fff;
+}
+
 .bzwt-modal {
     position: fixed;
     top: 0;
@@ -770,7 +806,8 @@ body {
     /*-webkit-transition: visibility 0s linear;*/
     /*transition: visibility 0s linear;*/
 }
-.modal-s-service-express li{
+
+.modal-s-service-express li {
     list-style-type: disc;
 }
 
