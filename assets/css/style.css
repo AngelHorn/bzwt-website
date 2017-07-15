@@ -333,7 +333,7 @@ body {
     overflow: hidden;
     background-position: center;
     background-size: 100%;
-    transition: background-size 100ms cubic-bezier(.55, .085, .68, .53);
+    transition: background-size 200ms cubic-bezier(.55, .085, .68, .53);
 }
 
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > div {
