@@ -1,5 +1,7 @@
 html {
     font-size: 62.5%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -811,7 +813,7 @@ body {
 }
 
 .s-specials-test:nth-child(odd) .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content svg {
-    fill: #000;
+    /*fill: #000;*/
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content svg {
