@@ -649,7 +649,7 @@ body {
     border-color: #000;
 }
 
-.s-special-test-item p{
+.s-special-test-item p {
     border-top: 1px solid #EEE;
     font-size: 14px;
 }
@@ -672,6 +672,123 @@ body {
 .s-product-wrap .s-product-block .s-product-item:hover .s-product-detail .s-product-detail-button {
     background-color: #000;
     color: #FFF;
+}
+
+/*精选特色 - 测试*/
+.s-specials-test {
+    background-color: #ffffff;
+}
+
+.s-specials-test .s-specials-test-wrap {
+    position: relative;
+    background-size: 130% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    /*height: 800px;*/
+    background-attachment: fixed;
+}
+
+.s-specials-test .s-specials-test-wrap > img {
+    width: 50%;
+    margin-left: 50%;
+    vertical-align: bottom;
+    visibility: visible;
+    border: 1px solid green;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner {
+    width: 50%;
+    /*height: 100%;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 400ms ease-in-out;
+    border:1px solid blue;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner > img {
+    visibility: hidden;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    display: table;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content svg {
+    width: 15%;
+    transition: fill 400ms ease-in-out;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content p {
+    font-size: 3.4rem;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content span {
+    font-size: 1.4rem;
+}
+
+.s-specials-test:nth-child(2) .s-specials-test-wrap {
+    background-image: url("../../assets/img/services/1.jpg");
+    /*background-image: url(//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/ecrin.adaptive.1637.jpg);*/
+}
+
+.s-specials-test:nth-child(3) .s-specials-test-wrap {
+    background-image: url("../../assets/img/services/2.jpg");
+    /*background-image: url('//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/echantillons.adaptive.1637.jpg');*/
+}
+
+.s-specials-test:nth-child(4) .s-specials-test-wrap {
+    background-image: url("../../assets/img/services/3.jpg");
+    /*background-image: url('//i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/equipe-dediee.adaptive.1637.jpg');*/
+}
+
+.s-specials-test:nth-child(5) .s-specials-test-wrap {
+    background-image: url("../../assets/img/services/4.jpg");
+    /*background-image: url('https://i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/livraison.adaptive.1637.jpg');*/
+}
+
+.s-specials-test:nth-child(odd) .s-specials-test-wrap .s-specials-test-inner {
+    /*left: inherit;*/
+    /*right: 0;*/
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover {
+    /*transition: all 200ms ease-in-out;*/
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content .s-specials-test-detail-button {
+    display: table;
+    margin: 20px auto;
+    position: relative;
+    /*background-color: #000;*/
+    font-size: 16px;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    font-weight: 400;
+    text-align: center;
+    transition: all 400ms ease-in-out;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content .s-specials-test-detail-button {
+    background-color: #fff;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content svg {
+    fill: #FFF;
 }
 
 /*包装细节*/
