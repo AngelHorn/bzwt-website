@@ -697,8 +697,8 @@ body {
 }
 
 .s-specials-test:nth-child(odd) .s-specials-test-wrap > img {
-    margin-left: inherit;
-    margin-right: 50%;
+    /*margin-left: inherit;*/
+    /*margin-right: 50%;*/
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner {
@@ -777,9 +777,9 @@ body {
 }
 
 .s-specials-test:nth-child(odd) .s-specials-test-wrap .s-specials-test-inner {
-    background-color: #ffffff;
-    color: #000000;
-    margin-left: 50%;
+    /*background-color: #ffffff;*/
+    /*color: #000000;*/
+    /*margin-left: 50%;*/
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover {
