@@ -696,6 +696,11 @@ body {
     /*border: 1px solid green;*/
 }
 
+.s-specials-test:nth-child(odd) .s-specials-test-wrap > img {
+    margin-left: inherit;
+    margin-right: 50%;
+}
+
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner {
     width: 50%;
     /*height: 100%;*/
@@ -704,7 +709,7 @@ body {
     bottom: 0;
     left: 0;
     transition: all 400ms ease-in-out;
-    border-top:1px solid #ffffff;
+    /*border-top:1px solid #ffffff;*/
     background-color: #000000;
     color: #ffffff;
 }
@@ -736,8 +741,9 @@ body {
     font-size: 3.4rem;
 }
 
-.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content span {
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content div {
     font-size: 1.4rem;
+    padding: 0 20%;
 }
 
 .s-specials-test:nth-child(2) .s-specials-test-wrap {
@@ -760,12 +766,10 @@ body {
     /*background-image: url('https://i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/livraison.adaptive.1637.jpg');*/
 }
 
-
 .s-specials-test:nth-child(6) .s-specials-test-wrap {
     /*background-color: #fde3cf;*/
     /*background-image: url('https://i.chanel.cn/content/dam/fnb/core/aow/visuels/desktop/livraison.adaptive.1637.jpg');*/
 }
-
 
 .s-specials-test:nth-child(7) .s-specials-test-wrap {
     /*background-color: #e4e2fa;*/
@@ -773,14 +777,15 @@ body {
 }
 
 .s-specials-test:nth-child(odd) .s-specials-test-wrap .s-specials-test-inner {
-    /*left: inherit;*/
-    /*right: 0;*/
+    background-color: #ffffff;
+    color: #000000;
+    margin-left: 50%;
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover {
     /*transition: all 200ms ease-in-out;*/
-    background-color: #000000;
-    color: #FFFFFF;
+    /*background-color: #000000;*/
+    /*color: #FFFFFF;*/
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content .s-specials-test-detail-button {
@@ -804,8 +809,17 @@ body {
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content svg {
     fill: #FFF;
 }
-.s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content svg {
+
+.s-specials-test:nth-child(odd) .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content svg {
     fill: #000;
+}
+
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content svg {
+    /*fill: #000;*/
+}
+
+.s-specials-test:nth-child(odd) .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content svg {
+    /*fill: #FFF;*/
 }
 
 /*包装细节*/
