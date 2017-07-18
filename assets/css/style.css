@@ -704,8 +704,9 @@ body {
     bottom: 0;
     left: 0;
     transition: all 400ms ease-in-out;
-    border-top:1px solid black;
-    background-color: #ffffff;
+    border-top:1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner > img {
@@ -800,8 +801,11 @@ body {
     background-color: #fff;
 }
 
-.s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content svg {
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content svg {
     fill: #FFF;
+}
+.s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover .s-specials-test-content svg {
+    fill: #000;
 }
 
 /*包装细节*/
