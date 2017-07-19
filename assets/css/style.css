@@ -491,13 +491,13 @@ body {
 .s-service .s-service-wrap .s-service-inner .s-service-content {
     text-align: center;
     width: 100%;
+    top: 50%;
+    left: 50%;
     position: absolute;
-    display: table;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 .s-service .s-service-wrap .s-service-inner .s-service-content svg {
@@ -725,13 +725,13 @@ body {
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content {
     text-align: center;
     width: 100%;
+    top: 50%;
+    left: 50%;
     position: absolute;
-    display: table;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content svg {

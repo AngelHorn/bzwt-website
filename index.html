@@ -1141,7 +1141,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
 //        $(".bzwt-modal-inner > div.modal-" + modal_id).css('display', 'block');
         $(".bzwt-modal-wrapper").scrollTop(0);
         $(".bzwt-modal-inner").fadeOut().delay(500).fadeIn("slow");
-        $("body").css('overflow', 'hidden');
+        $("html").css('overflow', 'hidden');
         $(".bzwt-modal").addClass("bzwt-modal-show");
     };
 
@@ -1152,7 +1152,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         });
         $(".bzwt-modal-close").click(function () {
             $(".bzwt-modal").removeClass("bzwt-modal-show");
-            $("body").css('overflow', 'auto');
+            $("html").css('overflow', 'auto');
         });
 
         //单页滚动导航
