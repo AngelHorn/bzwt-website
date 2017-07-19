@@ -147,9 +147,6 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
                     </div>
                 </a>
             </div>
-            <div class="s-instruction-text-wrap" style="display: none">
-                <img src="assets/img/how-to-eat.jpg">
-            </div>
         </div>
     </div>
 </section>
@@ -891,7 +888,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         <!--<li>Net <small>(净含量)</small> : 500g(120-130g * 4)(为什么要分成4组分别封装)</li>-->
 
     </ul>
-    <img src="assets/img/test.jpg" style="width: 10%;">
+    <!--<img src="assets/img/test.jpg" style="width: 10%;">-->
     <hr>
     清洁度 无残留沙土<br>
     横断面颜色 墨绿或黄绿色<br>
@@ -966,7 +963,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         <!--<li>Net <small>(净含量)</small> : 500g(120-130g * 4)(为什么要分成4组分别封装)</li>-->
 
     </ul>
-    <img src="assets/img/test.jpg" style="width: 10%;">
+    <!--<img src="assets/img/test.jpg" style="width: 10%;">-->
     <hr>
     清洁度 无残留沙土<br>
     横断面颜色 墨绿或黄绿色<br>
@@ -1041,7 +1038,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         <!--<li>Net <small>(净含量)</small> : 500g(120-130g * 4)(为什么要分成4组分别封装)</li>-->
 
     </ul>
-    <img src="assets/img/test.jpg" style="width: 10%;">
+    <!--<img src="assets/img/test.jpg" style="width: 10%;">-->
     <hr>
     清洁度 无残留沙土<br>
     横断面颜色 墨绿或黄绿色<br>
@@ -1231,16 +1228,21 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         var windowHeight = $(window).height();
         var section4Height = $("#section-4").height();
         var section2Height = $("#section-2").height();
+        var $specials = $(".s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content");
+        var $navWrapperPcWider = $(".fuck-footer .nav-wrapper-pc-wider");
+        var prevFuck ;
         $(window).scroll(function () {
+//            prevFuck ++;
+//            console.log(prevFuck);
             var scrollTop = $(window).scrollTop();
 //            console.log(scrollTop);
             //导航变色
             if (scrollTop >= windowHeight * 0.5) {
 //                alert("fuck");
 //                $("#zyp-test").addClass("zyp-test-show");
-                $(".fuck-footer .nav-wrapper-pc-wider").css("background-color", "rgba(0,0,0,0.5)");
+                $navWrapperPcWider.css("background-color", "rgba(0,0,0,0.5)");
             } else {
-                $(".fuck-footer .nav-wrapper-pc-wider").css("background-color", "transparent");
+                $navWrapperPcWider.css("background-color", "transparent");
             }
 
             //服务信息视差滚动
@@ -1264,14 +1266,17 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
             if (scrollTop > section2Top) {
                 var section_child_height = (section2Height - 262) / 6;
                 var fuck = (scrollTop - section2Top - 262) / section_child_height;
-                console.log(parseInt(fuck));
+//                console.log(parseInt(fuck));
                 if (fuck >= 0 && fuck < 5) {
-                    $(".s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content")
-                            .removeClass("fix")
-                            .eq(parseInt(fuck))
-                            .addClass("fix");
+                    if(prevFuck == undefined){
+                        $specials.eq(parseInt(fuck)).addClass("fix");
+                    }else{
+                        $specials.eq(prevFuck).removeClass("fix");
+                        $specials.eq(parseInt(fuck)).addClass("fix");
+                    }
+                    prevFuck = parseInt(fuck);
                 } else {
-                    $(".s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content")
+                    $specials
                             .removeClass("fix");
                 }
 
