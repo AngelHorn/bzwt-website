@@ -744,9 +744,8 @@ body {
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner:hover {
-    /*transition: all 200ms ease-in-out;*/
-    /*background-color: #000000;*/
-    /*color: #FFFFFF;*/
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content .s-specials-test-detail-button {
