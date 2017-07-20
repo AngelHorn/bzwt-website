@@ -1222,6 +1222,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         '.s-product-wrap .s-product-pic-wrap > p', {
             distance: '20px'
         });
+        sr.reveal(".s-instruction-config-wrap a", {delay: 1000}, 300);
 
 
         //滚动事件监控
@@ -1230,7 +1231,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         var section2Height = $("#section-2").height();
         var $specials = $(".s-specials-test .s-specials-test-wrap .s-specials-test-inner .s-specials-test-content");
         var $navWrapperPcWider = $(".fuck-footer .nav-wrapper-pc-wider");
-        var prevFuck ;
+        var prevFuck;
         $(window).scroll(function () {
 //            prevFuck ++;
 //            console.log(prevFuck);
@@ -1268,16 +1269,15 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
                 var fuck = (scrollTop - section2Top - 262) / section_child_height;
 //                console.log(parseInt(fuck));
                 if (fuck >= 0 && fuck < 5) {
-                    if(prevFuck == undefined){
+                    if (prevFuck == undefined) {
                         $specials.eq(parseInt(fuck)).addClass("fix");
-                    }else{
+                    } else {
                         $specials.eq(prevFuck).removeClass("fix");
                         $specials.eq(parseInt(fuck)).addClass("fix");
                     }
                     prevFuck = parseInt(fuck);
                 } else {
-                    $specials
-                            .removeClass("fix");
+                    $specials.removeClass("fix");
                 }
 
 //                console.log(scrollTop - (section2Top));
@@ -1293,6 +1293,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
 
 
         });
+        $(window).scroll();//出屎触发
     });
 </script>
 <!--首屏全屏自适应-->

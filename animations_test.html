@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        .container {
+            overflow: hidden;
+            margin: 300px;
+            position: relative;
+            width: 400px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*margin: auto;*/
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            color: #fff;
+        }
+
+        .mask-45deg .mask {
+            position: absolute;
+            /*left: 50%;*/
+            /*top: 50%;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            /*top: 0;*/
+            /*bottom: 0;*/
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            background: #ffffff;
+            /*opacity: 0;*/
+            transform: rotate(-45deg) translate(0%);
+            transition: all .5s ease-in-out;
+            /*background: linear-gradient(90deg,transparent 0%, #FFF 10%);*/
+        }
+
+        .container.mask-45deg:hover .mask {
+            transform: rotate(-45deg) translate(100%);
+        }
+
+        .lighting-material .mask {
+            position: absolute;
+            /*left: 50%;*/
+            /*top: 50%;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            /*top: 0;*/
+            /*bottom: 0;*/
+            margin: auto;
+            width: 100px;
+            height: 500px;
+            background: linear-gradient(90deg,transparent, #ffffff,transparent);
+            /*opacity: 0;*/
+            transform: rotate(-45deg) translate(-300%);
+            transition: all .5s ease-in-out;
+            /*background: linear-gradient(90deg,transparent 0%, #FFF 10%);*/
+        }
+
+        .container.lighting-material:hover .mask {
+            transform: rotate(-45deg) translate(300%);
+        }
+    </style>
+</head>
+<body>
+<div class="container mask-45deg">
+    <div class="content">
+        <h1>title</h1>
+
+        <p>德玛西亚 永世长存</p>
+    </div>
+    <div class="mask"></div>
+</div>
+<div class="container lighting-material">
+    <div class="content">
+        <h1>title</h1>
+
+        <p>德玛西亚 永世长存</p>
+    </div>
+    <div class="mask"></div>
+</div>
+
+</body>
+</html>
