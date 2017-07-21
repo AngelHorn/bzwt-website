@@ -320,12 +320,30 @@ body {
     text-align: left;
     box-shadow: none;
     box-sizing: border-box;
-    display: inline-block;
+    display: inline-flex;
     width: 340px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div {
+.s-instruction-config-pace-mask {
+    background-color: pink;
+    position: absolute;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    /*background: #ffffff;*/
+    transform: rotate(-45deg) translate(0%);
+    transition: all .5s ease;
+}
+
+.s-instruction-config-pace-mask.hide-mask {
+    transform: rotate(-45deg) translate(100%);
+}
+
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > .s-instruction-config-pace-content {
     color: #fff;
     position: absolute;
     margin: 0 auto;
@@ -339,11 +357,11 @@ body {
     transition: background-size 200ms cubic-bezier(.55, .085, .68, .53);
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > div {
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > .s-instruction-config-pace-content {
     background-size: 120%;
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > p {
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > .s-instruction-config-pace-content > p {
     /*padding-left: 20px;*/
     margin: 0;
     font-size: 14px;
@@ -352,14 +370,14 @@ body {
     left: 20px;
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > span:nth-child(2) {
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > .s-instruction-config-pace-content > span:nth-child(2) {
     position: absolute;
     bottom: 16px;
     left: 20px;
     /*padding-left: 20px;*/
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > div > .s-instruction-detail-button {
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > .s-instruction-config-pace-content > .s-instruction-detail-button {
     left: inherit;
     bottom: 20px;
     right: 20px;
@@ -374,7 +392,7 @@ body {
     transition: all 200ms ease-in-out;
 }
 
-.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > div > .s-instruction-detail-button {
+.s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace:hover > .s-instruction-config-pace-content > .s-instruction-detail-button {
     background-color: #FFF;
     color: #000;
     transition: all 200ms ease-in-out;
@@ -400,15 +418,15 @@ body {
 /*width: 100%;*/
 /*}*/
 
-.s-instruction-wrap .s-instruction-config-wrap a:nth-child(1) .s-instruction-config-pace > div {
+.s-instruction-wrap .s-instruction-config-wrap a:nth-child(1) .s-instruction-config-pace > .s-instruction-config-pace-content {
     background-image: url(../img/intro-sanchi.jpg);
 }
 
-.s-instruction-wrap .s-instruction-config-wrap a:nth-child(2) .s-instruction-config-pace > div {
+.s-instruction-wrap .s-instruction-config-wrap a:nth-child(2) .s-instruction-config-pace > .s-instruction-config-pace-content {
     background-image: url(../img/intro-wenshan.jpg);
 }
 
-.s-instruction-wrap .s-instruction-config-wrap a:nth-child(3) .s-instruction-config-pace > div {
+.s-instruction-wrap .s-instruction-config-wrap a:nth-child(3) .s-instruction-config-pace > .s-instruction-config-pace-content {
     background-image: url(../img/intro-function.jpg);
 }
 

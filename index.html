@@ -112,7 +112,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
             <div class="s-instruction-config-wrap">
                 <a data-modal="s-instruction-item-sanchi" href="javascript:;">
                     <div class="s-instruction-config-pace">
-                        <div>
+                        <div class="s-instruction-config-pace-content">
                             <p>这门神奇的药材</p>
                             <span>三七介绍</span>
 
@@ -120,11 +120,12 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
                                 Detail
                             </div>
                         </div>
+                        <div class="s-instruction-config-pace-mask"></div>
                     </div>
                 </a>
                 <a data-modal="s-instruction-item-wenshan" href="javascript:;">
                     <div class="s-instruction-config-pace">
-                        <div>
+                        <div class="s-instruction-config-pace-content">
                             <p>三七主产地 - 云南文山</p>
                             <span>产地介绍</span>
 
@@ -132,11 +133,12 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
                                 Detail
                             </div>
                         </div>
+                        <div class="s-instruction-config-pace-mask"></div>
                     </div>
                 </a>
                 <a data-modal="s-instruction-item-function" href="javascript:;">
                     <div class="s-instruction-config-pace">
-                        <div>
+                        <div class="s-instruction-config-pace-content">
                             <p>这门神奇的药材</p>
                             <span>功效介绍</span>
 
@@ -144,7 +146,9 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
                                 Detail
                             </div>
                         </div>
+                        <div class="s-instruction-config-pace-mask"></div>
                     </div>
+
                 </a>
             </div>
         </div>
@@ -1222,7 +1226,10 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         '.s-product-wrap .s-product-pic-wrap > p', {
             distance: '20px'
         });
-        sr.reveal(".s-instruction-config-wrap a", {delay: 1000}, 300);
+//        sr.reveal(".s-instruction-config-wrap a", {delay: 1000}, 300);
+        sr.reveal(".s-instruction-config-pace-mask", {rotate: {z: 45}, delay: 0}, 0);
+        sr.reveal(".s-instruction-config-pace-mask", {delay: 1000}, 500);
+//        transform: rotate(-45deg) translate(100%);
 
 
         //滚动事件监控
