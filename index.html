@@ -1216,19 +1216,26 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         sr.reveal('.video-container .video-control img,' +
         '.s-instruction-config-wrap,.background-pax > div > div');
 
-        sr.reveal('' +
-        '.s-instruction-wrap .s-instruction-text-wrap img', {
-            distance: '20px',
-            origin: "top",
-            delay: 800
-        });
+//        sr.reveal('' +
+//        '.s-instruction-wrap .s-instruction-text-wrap img', {
+//            distance: '20px',
+//            origin: "top",
+//            delay: 800
+//        });
         sr.reveal('.s-product-wrap .s-product-pic-wrap > div > span,' +
         '.s-product-wrap .s-product-pic-wrap > p', {
             distance: '20px'
         });
-//        sr.reveal(".s-instruction-config-wrap a", {delay: 1000}, 300);
-        sr.reveal(".s-instruction-config-pace-mask", {rotate: {z: 45}, delay: 0}, 0);
-        sr.reveal(".s-instruction-config-pace-mask", {delay: 1000}, 500);
+        sr.reveal(".s-instruction-config-pace", {
+            opacity: 1, duration: 0, delay: 900, afterReveal: function (domEl) {
+                $(domEl).children(".s-instruction-config-pace-mask").addClass("hide-mask");
+            },
+            afterReset: function (domEl) {
+                $(domEl).children(".s-instruction-config-pace-mask").removeClass("hide-mask");
+            }
+        }, 300);
+//        sr.reveal(".s-instruction-config-pace-mask", {rotate: {z: 45}, delay: 0}, 0);
+//        sr.reveal(".s-instruction-config-pace-mask", {delay: 1000}, 500);
 //        transform: rotate(-45deg) translate(100%);
 
 
