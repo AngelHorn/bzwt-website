@@ -526,8 +526,6 @@ body {
     top: 50%;
     left: 50%;
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     margin: auto;
 }
@@ -541,7 +539,7 @@ body {
     font-size: 3.4rem;
 }
 
-.s-service .s-service-wrap .s-service-inner .s-service-content span {
+.s-service .s-service-wrap .s-service-inner .s-service-content div {
     font-size: 1.4rem;
 }
 
@@ -577,8 +575,8 @@ body {
 }
 
 .s-service .s-service-wrap .s-service-inner .s-service-content .s-service-detail-button {
-    display: table;
-    margin: 20px auto;
+    display: inline-block;
+    margin: 10px auto;
     position: relative;
     /*background-color: #000;*/
     font-size: 16px;
