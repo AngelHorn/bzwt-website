@@ -357,7 +357,9 @@ body {
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > .s-instruction-config-pace-content {
     color: #fff;
     position: absolute;
-    margin: 0 auto;
+    left: 0;
+    top: 0;
+    /*margin: 0 auto;*/
     /*padding-top: 258px;*/
     width: 340px;
     height: 340px;
@@ -389,10 +391,10 @@ body {
 }
 
 .s-instruction-wrap .s-instruction-config-wrap .s-instruction-config-pace > .s-instruction-config-pace-content > .s-instruction-detail-button {
-    left: inherit;
     bottom: 20px;
     right: 20px;
     position: absolute;
+    display: table;
     /*background-color: #FFF;*/
     font-size: 16px;
     color: #FFF;
