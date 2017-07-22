@@ -38,17 +38,17 @@
     line-height: 6rem;
     font-size: 2rem;
     border-radius: 50%;
-    background: rgba(34, 153, 221, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 100;
     text-align: center;
 
-    -webkit-animation: pace-theme-center-circle-spin linear infinite 2s;
-    -moz-animation: pace-theme-center-circle-spin linear infinite 2s;
-    -ms-animation: pace-theme-center-circle-spin linear infinite 2s;
-    -o-animation: pace-theme-center-circle-spin linear infinite 2s;
-    animation: pace-theme-center-circle-spin linear infinite 2s;
+    -webkit-animation: pace-theme-center-circle-spin linear infinite 3s;
+    -moz-animation: pace-theme-center-circle-spin linear infinite 3s;
+    -ms-animation: pace-theme-center-circle-spin linear infinite 3s;
+    -o-animation: pace-theme-center-circle-spin linear infinite 3s;
+    animation: pace-theme-center-circle-spin linear infinite 3s;
 
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
