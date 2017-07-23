@@ -1280,10 +1280,15 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
         var $specials = $(".s-specials .s-specials-wrap .s-specials-inner .s-specials-content");
         var $navWrapperPcWider = $(".fuck-footer .nav-wrapper-pc-wider");
         var prevFuck;
-        $(window).scroll(function () {
+        var last_known_scroll_position = 0;
+        var ticking = false;
+
+        function doSomething(scroll_pos) {
+            // do something with the scroll position
+
 //            prevFuck ++;
 //            console.log(prevFuck);
-            var scrollTop = $(window).scrollTop();
+            var scrollTop = scroll_pos;
 //            console.log(scrollTop);
             //导航变色
             if (scrollTop >= windowHeight * 0.5) {
@@ -1303,7 +1308,7 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
             } else {
                 $("#section-4 .s-service:nth-child(2) .s-service-wrap").css("background-attachment", "scroll");
             }
-
+            console.log(scrollTop - (section4Top + section4Height * 0.75 + 262 * 0.25));
             if (scrollTop > section4Top + section4Height * 0.75 + 262 * 0.25) {
                 $("#section-4 .s-service:last-child .s-service-wrap").css("background-attachment", "scroll");
             } else {
@@ -1340,8 +1345,21 @@ top:0;bottom:0;left:0;right:0;position: fixed;z-index:1000;">
             }
 
 
+        }
+
+        window.addEventListener('scroll', function(e) {
+            last_known_scroll_position = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    doSomething(last_known_scroll_position);
+                    ticking = false;
+                });
+            }
+            ticking = true;
         });
-        $(window).scroll();//出屎触发
+//        $(window).scroll(function () {
+//        });
+//        $(window).scroll();//出屎触发
     });
 </script>
 <!--首屏全屏自适应-->
